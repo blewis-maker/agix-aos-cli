@@ -20,8 +20,8 @@ Homebrew installs Node for you. Rust is used at install time to build the local 
 The first time you run `agix`, an onboarding session walks you through setup:
 
 - It captures your **north star** — what you're trying to build or solve.
-- It provisions your local environment: a knowledge fabric, a `wiki/`, and your instance identity.
-- It stands up your agent fleet.
+- It asks where to keep your **workspace** — your `wiki/` and knowledge fabric — defaulting to `~/agix` (a visible directory you own and grow, not a hidden state dir).
+- It provisions that workspace and your instance identity, then stands up your agent fleet.
 
 No API key needed if you have Claude Code or OpenAI Codex installed and signed in — Agix uses your existing CLI for model access. Otherwise, you can set an API key.
 
@@ -45,7 +45,7 @@ agix agent list          # see your agent fleet
 
 ## Your data and privacy
 
-Agix AOS is local-first. State lives under your home directory (`~/.config/agix` and related paths), and there is no telemetry — nothing is sent anywhere.
+Agix AOS is local-first. Your workspace (wiki + knowledge base) lives where you chose it at onboarding (`~/agix` by default); config lives in `~/.config/agix`. There is no telemetry — nothing is sent anywhere.
 
 These agents are autonomous and act on your machine: they can read and write files and run commands. Review an agent before you run it, and treat its capability the way you'd treat any tool with shell access. If you're using Claude Code or Codex for model access, running agents makes real model calls that count against that account's usage.
 
